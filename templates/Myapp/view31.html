@@ -1,0 +1,22 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container" align="center">
+    <div class="jumbotron">
+          <h3>Requested images are:</h3>
+    </div>
+</div>
+{% if bloat %}
+{% for image in bloat %}
+<img src="{{ image }}">
+{% endfor %}
+{% endif %}
+</body>
+</html>

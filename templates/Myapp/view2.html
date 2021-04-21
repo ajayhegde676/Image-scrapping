@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <center>
+    <form action="{% url 'view2' %}" method="get" style="margin-top: 200px">
+        {{ form.as_p }}
+        <label>Search the name</label>
+        <input type="text" name="search">
+        <input type="submit" class="btn btn-primary" value="search me"/>
+
+    </form>
+    </center>
+</div>
+
+ {% if sea %}
+        {%for i in sea %}
+<div class="container" align="center">
+        <div class="jumbotron">
+            <h4>Phone number:{{ i.phone }}</h4>
+            <br/>
+            <h4>Url:{{ i.url }}</h4>
+         {% endfor %}
+
+    {% endif %}
+    </div>
+  </div>
+
+
+
+</body>
+</html>
